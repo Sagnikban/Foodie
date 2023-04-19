@@ -1,13 +1,14 @@
 
 import './App.css';
 import Footer from './components/Footer';
-import Home from './screens/Home';
+import Home from './screens/HomePage';
+import Login from './screens/Login';
+
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
-import Login from './screens/Login';
 
 function App() {
   return (
