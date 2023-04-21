@@ -2,9 +2,8 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar';
 
-
-export default function Login() {
-  const [credentials, setCredentials] = useState({email: "", password: "" })
+export default function Signup() {
+  const [credentials, setCredentials] = useState({ name: "", email: "", password: "", geolocation: "" })
 
 
   const handleSubmit = async (e) => {
@@ -14,7 +13,7 @@ export default function Login() {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ email: credentials.email, password: credentials.password })
+      body: JSON.stringify({ name: credentials.name, email: credentials.email, password: credentials.password, location: credentials.geolocation })
 
     });
 
@@ -32,7 +31,10 @@ export default function Login() {
 
   return (
     <div>
-      
+      <div>
+        <Navbar />
+      </div>
+
       <div className='container' >
         <form onSubmit={handleSubmit}>
           <div className="m-3">
@@ -49,6 +51,10 @@ export default function Login() {
             <input type="password" className="form-control" value={credentials.password} onChange={onChange} name='password' />
           </div>
 
+          <div className="m-3">
+            <label htmlFor="exampleInputPassword1" className="form-label">Address</label>
+            <input type="text" className="form-control" value={credentials.geolocation} onChange={onChange} name='geolocation' />
+          </div>
           <button type="submit" className="m-3 btn btn-success">Submit</button>
           <Link to="/login" className="m-3 mx-1 btn btn-danger">Already a user</Link>
         </form>
@@ -56,3 +62,4 @@ export default function Login() {
     </div>
   )
 }
+

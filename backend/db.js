@@ -3,8 +3,7 @@ const mongoURI='mongodb+srv://banerjeesagnik29:Arju01%40%25@cluster0.nh3sdco.mon
 
 const mongoDB=async()=>{
 await mongoose.connect(mongoURI,{useNewURlParser:true},
-    
-    
+
     async(err,result)=>{
 
     if(err)
