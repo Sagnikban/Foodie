@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar';
 
 
 export default function Login() {
-  const [credentials, setCredentials] = useState({email: "", password: "" })
+  const [credentials, setCredentials] = useState({ email: "", password: "" })
 
 
   const handleSubmit = async (e) => {
@@ -21,8 +21,8 @@ export default function Login() {
     const json = await response.json()
     console.log(json);
 
-    if (!json.success) 
-    alert("Enter Valid Credentials")
+    if (!json.success)
+      alert("Enter Valid Credentials")
   }
 
   const onChange = (event) => {
@@ -32,13 +32,9 @@ export default function Login() {
 
   return (
     <div>
-      
+
       <div className='container' >
         <form onSubmit={handleSubmit}>
-          <div className="m-3">
-            <label htmlFor="name" className="form-label">Name</label>
-            <input type="text" className="form-control" name='name' value={credentials.name} onChange={onChange} aria-describedby="emailHelp" />
-          </div>
           <div className="m-3">
             <label htmlFor="email" className="form-label">Email address</label>
             <input type="email" className="form-control" name='email' value={credentials.email} onChange={onChange} aria-describedby="emailHelp" />
@@ -50,7 +46,7 @@ export default function Login() {
           </div>
 
           <button type="submit" className="m-3 btn btn-success">Submit</button>
-          <Link to="/login" className="m-3 mx-1 btn btn-danger">Already a user</Link>
+          <Link to="/createuser" className="m-3 mx-1 btn btn-danger">I'm a new user</Link>
         </form>
       </div>
     </div>

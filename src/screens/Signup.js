@@ -56,7 +56,7 @@ export default function Signup() {
             <input type="text" className="form-control" value={credentials.geolocation} onChange={onChange} name='geolocation' />
           </div>
           <button type="submit" className="m-3 btn btn-success">Submit</button>
-          <Link to="/login" className="m-3 mx-1 btn btn-danger">Already a user</Link>
+          <Link to="/login" className="m-3 mx-1 btn btn-danger">Already an user</Link>
         </form>
       </div>
     </div>
