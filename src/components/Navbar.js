@@ -19,7 +19,7 @@ export default function Navbar() {
           <Link className="nav-link" to='/login'>Login</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to='/createuser'>SingUp</Link>
+          <Link className="nav-link" to='/createuser'>SignUp</Link>
         </li>
         
       </ul>
